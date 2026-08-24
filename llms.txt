@@ -1,0 +1,21 @@
+# testx
+
+> LLM documentation for github.com/go-testx/testx (Go 1.23+).
+
+testx layers typed assertions, declarative Cases, presets, contracts, polling, HTTP/CLI helpers, golden files, benchmarks, and fuzz seeds on Go's standard testing package. Assertions report failures themselves; do not wrap them in if + Fatal/Error. RunErr expects no error unless a Case uses WithError.
+
+## Documentation
+
+- [/overview.md](docs/ai/overview.md): Overview and core rules.
+- [/api-reference.md](docs/ai/api-reference.md): Complete public API reference.
+- [/recipes.md](docs/ai/recipes.md): Test-generation recipes.
+- [/constraints.md](docs/ai/constraints.md): Generation constraints and review checklist.
+- [/README.md](README.md): Human-oriented full project documentation, installation, and IDE tooling.
+
+## Quick generation rules
+
+1. Keep standard func TestXxx(t *testing.T) tests.
+2. Use Require for prerequisites and Assert for independent checks.
+3. Never add t.Fatal/t.Error after a failed testx assertion; it already reported.
+4. Match Run, RunErr, or ContextFuncErr to the exact subject signature.
+5. Do not invent APIs or business fixtures; fall back to standard testing when needed.

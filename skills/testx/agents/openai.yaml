@@ -1,0 +1,4 @@
+interface:
+  display_name: "testx Go Testing"
+  short_description: "Write robust Go tests with the testx library"
+  default_prompt: "Use $testx to write focused Go tests for this code."
