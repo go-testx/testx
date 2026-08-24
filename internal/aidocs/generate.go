@@ -111,7 +111,6 @@ func render(root string) (map[string][]byte, error) {
 	outputs := map[string][]byte{
 		filepath.Join(root, "llms.txt"):      []byte(index.String()),
 		filepath.Join(root, "llms-full.txt"): []byte(full.String()),
-		filepath.Join(root, "editors", "goland-testx", "src", "main", "resources", "testx-ai-context.md"): []byte(full.String()),
 	}
 	for path, content := range references {
 		outputs[path] = content
